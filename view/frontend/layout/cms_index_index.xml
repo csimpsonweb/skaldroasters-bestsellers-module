@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <referenceContainer name="content">
+            <block
+                   class="WildDonkey\Bestsellers\Block\HomeBestsellers"
+                   name="wilddonkey.home.bestsellers"
+                   after="about_us_block"
+                   template="WildDonkey_Bestsellers::home/bestsellers.phtml">
+                <arguments>
+                    <argument name="sections" xsi:type="array">
+                        <item name="coffee" xsi:type="array">
+                            <item name="title" xsi:type="string">Best-Selling Coffee</item>
+                            <item name="category_id" xsi:type="number">3</item>
+                        </item>
+                        <item name="equipment" xsi:type="array">
+                            <item name="title" xsi:type="string">Popular Equipment</item>
+                            <item name="category_id" xsi:type="number">4</item>
+                        </item>
+                    </argument>
+                    <argument name="period" xsi:type="string">month</argument>
+                    <argument name="limit" xsi:type="number">3</argument>
+                    <argument name="hide_out_of_stock" xsi:type="boolean">false</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
