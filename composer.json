@@ -1,0 +1,35 @@
+{
+    "name": "wilddonkey/module-bestsellers",
+    "description": "WildDonkey Bestsellers Module - Display bestselling products by category",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "WildDonkey Development Team",
+            "email": "dev@wilddonkey.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "magento/framework": "*",
+        "magento/module-catalog": "*",
+        "magento/module-reports": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "WildDonkey\\Bestsellers\\": ""
+        }
+    },
+    "extra": {
+        "map": [
+            [
+                "*",
+                "WildDonkey/Bestsellers"
+            ]
+        ]
+    }
+}
