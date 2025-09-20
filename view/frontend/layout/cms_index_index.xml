@@ -4,10 +4,11 @@
 
     <body>
         <referenceContainer name="content">
+            <!-- Bestselling Coffee - positioned after hero -->
             <block
                    class="WildDonkey\Bestsellers\Block\HomeBestsellers"
-                   name="wilddonkey.home.bestsellers"
-                   after="about_us_block"
+                   name="wilddonkey.home.bestsellers.coffee"
+                   after="wild_donkey_hero"
                    template="WildDonkey_Bestsellers::home/bestsellers.phtml">
                 <arguments>
                     <argument name="sections" xsi:type="array">
@@ -15,13 +16,28 @@
                             <item name="title" xsi:type="string">Best-Selling Coffee</item>
                             <item name="category_id" xsi:type="number">3</item>
                         </item>
+                    </argument>
+                    <argument name="period" xsi:type="string">month</argument>
+                    <argument name="limit" xsi:type="number">5</argument>
+                    <argument name="hide_out_of_stock" xsi:type="boolean">false</argument>
+                </arguments>
+            </block>
+
+            <!-- Popular Equipment - positioned after about_us_block -->
+            <block
+                   class="WildDonkey\Bestsellers\Block\HomeBestsellers"
+                   name="wilddonkey.home.bestsellers.equipment"
+                   after="about_us_block"
+                   template="WildDonkey_Bestsellers::home/bestsellers.phtml">
+                <arguments>
+                    <argument name="sections" xsi:type="array">
                         <item name="equipment" xsi:type="array">
                             <item name="title" xsi:type="string">Popular Equipment</item>
                             <item name="category_id" xsi:type="number">4</item>
                         </item>
                     </argument>
                     <argument name="period" xsi:type="string">month</argument>
-                    <argument name="limit" xsi:type="number">3</argument>
+                    <argument name="limit" xsi:type="number">5</argument>
                     <argument name="hide_out_of_stock" xsi:type="boolean">false</argument>
                 </arguments>
             </block>
